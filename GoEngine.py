@@ -11,7 +11,17 @@ class Go:
 
 # Called before each move is made to see whether certain place is legal to be played
     def check_legal (self, coordinate):
-        pass
+        x = coordinate[0]
+        y = coordinate[1]
+        
+        if self.dimension[x][y] != 0:
+            return False
+        
+        elif x == 0 or y == 0 or x == len(self.dimension[0]) or y == len(self.dimension[0]):
+            
+        elif  x < 0 or y < 0 or x > len(self.dimension[0]) or y > len(self.dimension[0]):
+            
+        else:
 
 # The main method used to place stones. Uses check_legal and clean_up to ensure legality
     def move (self, coordinate, color):
